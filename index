@@ -36,17 +36,14 @@ for (i = 0; i < cars.length; i++) {
 }}}
    var tet=text3;
 var mark = ((cars.length/tet))+" ("+text3+") "+(tet*cars.length);
-
- var mq =+ Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(tet))))))))))))))); 
- <!--the aboce "Math.sqrt([...](input)[...])" isn't set up correctly, it needs to perform the Math.sqrt(input) per the length of the base64 of the input. -->
- 
+ var mq =+ Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(tet)))))))))))))));
    var vc = (Math.pow(tet, Math.sqrt(tet))); var sr = Math.sqrt(tet); var po = Math.pow(tet, 2);
 var nexr1 = mq+" | "+vc+" |:| "+sr+" | "+po;
    
    var ck1 = 0; var ck2 = 0; var ck3 = 0; var ck4 = 0;
    var ck5 = 0; var ck6 = 0; var ck7 = 0; var ck8 = 0;
    var set1 = 0, set2 = 0, set3 = 0, set4 = 0, set5 = 0, set6 = 0, set7 = 0, set8 = 0; 
-   var set1a = 0, set2a = 0, set3a = 0, set4a = 0, set5a = 0, set6a = 0, set7a = 0, set8a = 0; <!--unused so far-->
+   var set1a = 0, set2a = 0, set3a = 0, set4a = 0, set5a = 0, set6a = 0, set7a = 0, set8a = 0; 
    var set9 = 0, set10 = 0, set11 = 0, set12 = 0, set13 = 0, set14 = 0, set15 = 0, set16 = 0;
 
     
@@ -179,7 +176,7 @@ var mm,flag4=0,number4;
   ck8 = 1;
   }
 
-   <!-- Didn't do double and triple prime checks -->
+   
    
    
    if(ck1 == 0 && ck5 == 0){
@@ -261,16 +258,13 @@ var mm,flag4=0,number4;
    
    var joinset1 = 0, joinset2 = 0, joinset3 = 0, joinset4 = 0;
    joinset1 = set1+""+set2+""+set9+""+set10; joinset2 = set3+""+set4+""+set11+""+set12; joinset3 = set5+""+set6+""+set13+""+set14; joinset4 = set7+""+set8+""+set15+""+set16;
-   
     var joinset1a = 0, joinset2a = 0, joinset3a = 0, joinset4a = 0;
    joinset1a = set9+""+set10+""+set1+""+set2; joinset2a = set11+""+set12+""+set3+""+set4; joinset3a = set13+""+set14+""+set5+""+set6; joinset4a = set15+""+set16+""+set7+""+set8;
-   
    var rest1a =0, rest1b =0, rest1c =0, rest1d =0, rest2a =0, rest2b =0, rest2c =0, rest2d =0, rest3a =0, rest3b =0, rest3c =0, rest3d =0, rest4a =0, rest4b =0, rest4c =0, rest4d =0; 
    
     var rest1aa =0, rest1ba =0, rest1ca =0, rest1da =0, rest2ab =0, rest2bb =0, rest2cb =0, rest2db =0, rest3ac =0, rest3bc =0, rest3cc =0, rest3dc =0, rest4ad =0, rest4bd =0, rest4cd =0, rest4dd =0; 
    
     var left1aa =0, left1ba =0, left1ca =0, left1da =0, left2ab =0, left2bb =0, left2cb =0, left2db =0, left3ac =0, left3bc =0, left3cc =0, left3dc =0, left4ad =0, left4bd =0, left4cd =0, left4dd =0; 
-    
    if(ck1 === set1){
     rest1a = 1; rest1c = 1;
 rest1ba = 1; rest1da = 1;
@@ -338,9 +332,7 @@ rest3bc = 1; rest3dc = 1;
     rest4b = 0; rest4d = 0;
     rest4ad = 0; rest4cd = 0;
    }
-   
     var left1a =0, left1b =0, left1c =0, left1d =0, left2a =0, left2b =0, left2c =0, left2d =0, left3a =0, left3b =0, left3c =0, left3d =0, left4a =0, left4b =0, left4c =0, left4d =0; 
-    
    if(ck1 === set1 === rest1a){
     left1a = 1; left1c = 1; 
     
@@ -392,7 +384,6 @@ rest3bc = 1; rest3dc = 1;
     
 var joinset1b = 0, joinset2b = 0, joinset3b = 0, joinset4b = 0;
   joinset1b = set9+""+set10+""+set1+""+set2; joinset2b = set11+""+set12+""+set3+""+set4; joinset3b = set13+""+set14+""+set5+""+set6; joinset4b = set15+""+set16+""+set7+""+set8;
-  
     var joinset1c = 0, joinset2c = 0, joinset3c = 0, joinset4c = 0;
    joinset1c = set1+""+set2+""+set9+""+set10; joinset2c = set3+""+set4+""+set11+""+set12; joinset3c = set5+""+set6+""+set13+""+set14; joinset4c = set7+""+set8+""+set15+""+set16;
    
@@ -450,7 +441,5 @@ var joinset1b = 0, joinset2b = 0, joinset3b = 0, joinset4b = 0;
 	return "<hr>"+text+"</br>"+dars+"<hr>"+text3+"</br>"+mark+"<hr>"+nexr1+"</br><hr></br>&nbsp;"+ck1+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck2+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck3+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck4+"&nbsp;</br>&nbsp;"+ck5+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck6+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck7+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck8+"&nbsp;</br>"+set1+""+set2+"&nbsp;&nbsp;"+set3+""+set4+"&nbsp;&nbsp;"+set5+""+set6+"&nbsp;&nbsp;"+set7+""+set8+"</br>"+set9+""+set10+"&nbsp;&nbsp;"+set11+""+set12+"&nbsp;&nbsp;"+set13+""+set14+"&nbsp;&nbsp;"+set15+""+set16+"<hr>"+joinset1+"&nbsp;"+joinset2+"&nbsp;"+joinset3+"&nbsp;"+joinset4+"&nbsp;&nbsp;"+joinset1b+"&nbsp;"+joinset2b+"&nbsp;"+joinset3b+"&nbsp;"+joinset4b+"</br>"+joinset1a+"&nbsp;"+joinset2a+"&nbsp;"+joinset3a+"&nbsp;"+joinset4a+"&nbsp;&nbsp;"+joinset1c+"&nbsp;"+joinset2c+"&nbsp;"+joinset3c+"&nbsp;"+joinset4c+"</br>"+rest1a+""+rest1b+""+rest1c+""+rest1d+"&nbsp;"+rest2a+""+rest2b+""+rest2c+""+rest2d+"&nbsp;"+rest3a+""+rest3b+""+rest3c+""+rest3d+"&nbsp;"+rest4a+""+rest4b+""+rest4c+""+rest4d+"&nbsp;&nbsp;"+rest1ba+""+rest1aa+""+rest1da+""+rest1ca+"&nbsp;"+rest2bb+""+rest2ab+""+rest2db+""+rest2cb+"&nbsp;"+rest3bc+""+rest3ac+""+rest3dc+""+rest3cc+"&nbsp;"+rest4bd+""+rest4ad+""+rest4dd+""+rest4cd+"</br>"+left1a+""+left1b+""+left1c+""+left1d+"&nbsp;"+left2a+""+left2b+""+left2c+""+left2d+"&nbsp;"+left3a+""+left3b+""+left3c+""+left3d+"&nbsp;"+left4a+""+left4b+""+left4c+""+left4d+"&nbsp;&nbsp;"+left1ba+""+left1aa+""+left1da+""+left1ca+"&nbsp;"+left2bb+""+left2ab+""+left2db+""+left2cb+"&nbsp;"+left3bc+""+left3ac+""+left3dc+""+left3cc+"&nbsp;"+left4bd+""+left4ad+""+left4dd+""+left4cd+"<hr></br>";
   }
 console.log(ascii_to_base38(data1.value));
-
-
 </script>
 </body>
