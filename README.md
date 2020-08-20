@@ -41,7 +41,7 @@ A working early version of the Faux-Quantum Bits. <a href="https://itty.bitty.si
 ### &nbsp; &nbsp; Webb Data Storage based on Priv-BIN Core Signature locking
 ### &nbsp; &nbsp; Programable Field Input to Use During Mining & Core Building
 
-# <i>What are Known Issues>?</i>
+# <i>What are Known Issues?</i>
 
 ## Binary Core becomes predictable on output after 7 characters:
 ### After 7 characters the core output can be guessed based on if input is even or odd.
