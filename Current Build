@@ -1,0 +1,1117 @@
+<style>
+ html {
+  word-wrap: break-word;
+ }
+  body {
+  word-wrap: break-word;
+ }
+ 
+  div {
+  word-wrap: break-word;
+ }
+</style>
+<body  >
+<div align="center" >
+ <h1 style="margin-bottom:-0.5%"><b>F<sup><sub><u>aux-</u></sub></sup>Q<sup><sub><u>u</u></sub></sup>B<sup><sub><u>its</u></sub></sup></b></br>
+ <sup>--<i><sup><sub><u>Under&nbsp;</u></sub></sup><sup><sub><u>Construction</u></sub></sup></i>--</sup></br></h1>
+<input id="inp" value="Input here"  maxlength="38" onfocus="this.value='';document.getElementById('data1').innerHTML='';"  style="text-align:center;width:95%;" /></br><input id='pcodein' placeholder='5 Character Seceret' type='text' minlength='0' maxlength='5' /><input type="button" onclick="document.getElementById('newoutput').style.display='block';innerHTML=document.getElementById('data1').innerHTML=ascii_to_base38(inp.value); document.getElementById('cores').innerHTML=miner(rebuild1, ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, set1, set2, set3, set4, set5, set6, set7, set8, set1a, set2a, set3a, set4a, set5a, set6a, set7a, set8a, set9, set10, set11, set12, set13, set14, set15, set16, joinset1, joinset2, joinset3, joinset4, joinset1a, joinset2a, joinset3a, joinset4a, rest1a, rest1b, rest1c, rest1d, rest2a, rest2b, rest2c, rest2d, rest3a, rest3b, rest3c, rest3d, rest4a, rest4b, rest4c, rest4d, rest1aa, rest1ba, rest1ca, rest1da, rest2ab, rest2bb, rest2cb, rest2db, rest3ac, rest3bc, rest3cc, rest3dc, rest4ad, rest4bd, rest4cd, rest4dd, left1aa, left1ba, left1ca, left1da, left2ab, left2bb, left2cb, left2db, left3ac, left3bc, left3cc, left3dc, left4ad, left4bd, left4cd, left4dd, left1a, left1b, left1c, left1d, left2a, left2b, left2c, left2d, left3a, left3b, left3c, left3d, left4a, left4b, left4c, left4d);" value="Start" /></br></br></br>
+<span>[Generic Binary Field]:
+ </br>
+<div id="newoutput" style="display:none">
+ <h1>B<sup><sub><u>uild</u></sub></sup> D<sup><sub><u>ata</u></sub></sup>:  </h1><hr>
+<p align='left' style='align:left'>BIN Core: <span id="core1"></span>
+ 
+</br>
+<span onclick="document.getElementById('binsig').style.display='block'; document.getElementById('close').style.display='block';">&#9997;</span> &nbsp;<span id="binsig" style="display:none"></span> <span id="close" onclick="document.getElementById('binsig').style.display='none';document.getElementById('close').style.display='none';" style="display:none;"></br>[x]</span>
+</br>
+</br>BIN Square: </p><span id="text44"></span><p align='left' style='align:left'>
+<span onclick="document.getElementById('binsq').style.display='block';document.getElementById('close2').style.display='block';">&#9997;</span> &nbsp;<span id='binsq' style="display:none"></span> <span id="close2" onclick="document.getElementById('binsq').style.display='none';document.getElementById('close2').style.display='none';" style="display:none;"></br>[x]</span></br>
+</br>BIN Field: </p><span id="corea"></span>&nbsp;<span id="coreb"></span></br><span id="corec"></span>&nbsp;<span id="cored"></span>
+</br><span id="coree"></span>&nbsp;<span id="coref"></span>
+<p align="left"><span onclick="document.getElementById('binfld').style.display='block'; document.getElementById('close3').style.display='block';" align="left" style="align:left;">&#9997;</span> &nbsp;<span align="left"  id="binfld" style="display:none;align:left;"></span> <span id="close3" onclick="document.getElementById('binfld').style.display='none';document.getElementById('close3').style.display='none';" style="display:none;"></br>[x]</span></p><hr></br>
+</br><h2>M<sup><sub><u>ining</u></sub></sup>:</h2></br>
+</br><span style='color:darkgreen;'><span id="full"></span></span>
+</br><span id="mineblock"></span>
+</br><span id="adding"></span>
+</br>
+<p  align="left" display="align:left;"><span onclick="document.getElementById('mined').style.display='block'; document.getElementById('close4').style.display='block';">&#9997;</span> &nbsp;<span id="mined" style="display:none"></span> <span id="close4" onclick="document.getElementById('mined').style.display='none';document.getElementById('close4').style.display='none';" style="display:none;"></br>[x]</span></p>
+</br></span></br><hr>
+</br><span id="findit"></span></br><hr><span align="left" display="align:left" onclick="document.getElementById('sigs').style.display='block';  document.getElementById('signpack').style.display='block';document.getElementById('close5').style.display='block';">&#9997;</span> &nbsp;
+<p id="sigs" align='left' style='align:left;display:none;'>Signatures: </br><span id="signpack" style="display:none;"></span>
+</p> <span id="close5" onclick="document.getElementById('sigs').style.display='none';document.getElementById('close5').style.display='none';" style="display:none;"></br>[x]</span>
+</div>
+<span id="oldoutput" style="display:none">
+</br><hr></br>
+ <p id="data1" style="background-color:black;color:lightgreen;display:none;"></p></br></br><p id="step2" style="background-color:black;color:lightgreen;display:none"></p></br></br><p id="cores" style="background-color:black;color:lightgreen;display:none"></p></span></span> 
+<hr style="margin-bottom:-1%">
+<h6><h5><b>Resources:</b></h5><h6>
+ <div style="margin-left:15%;margin-bottom:-0.69%;">
+  <li><a href="https://codepen.io/nullobject/pen/cngzI">nullobject (console.logs)</li>
+ </div>
+   <div style="margin-right:15%;margin-top:-0.83.5%;">
+ <li><a href="https://codepen.io/w3resource/pen/KeRQjG">w3resource (ascii2hex)</li>
+</h6></h6>
+<hr style="margin-top:-0.75%">
+ <div align="center"><footer style="background-color:lightgrey;padding-bottom:1.25%"></br>
+<a  href="https://codepen.io/digimancer3d/full/gOpXmNp" style="color:green;">Find this <q>Generic fQbit and Bin field Generator</q> (<i>by <b>3D</i></b>) on <b>CodePen</b></a> 
+ </footer></div></div>
+
+<script>
+ 
+ function ascii_to_base38(str1)
+  {
+var cars = btoa(str1); //we use the base64 of the input
+   var word = str1;
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) { //seperate per charcter
+  text += cars[i];
+  var dars = []; var hod = []; hod = -1;
+  for (var e = cars.length; e > 0; e--) {
+  dars =+ text.charCodeAt(hod+e)+dars;
+ 
+  var text2 = cars.charCodeAt(e);
+  var text3 = []; for(var r = hod+2.5; r <= (i+1); r++){
+  text3 =+ text3+text2; 
+}}}
+   var tet=text3;
+var mark = ((cars.length/tet))+" ("+text3+") "+(tet*cars.length); 
+ var mq =+ Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(Math.sqrt(tet)))))))))))))));
+   var vc = (Math.pow(tet, Math.sqrt(tet))); var sr = Math.sqrt(tet); var po = Math.pow(tet, 2);
+var nexr1 = mq+" | "+vc+" |:| "+sr+" | "+po;
+   
+   //binary field builds
+  var ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, set1, set2, set3, set4, set5, set6, set7, set8, set1a, set2a, set3a, set4a, set5a, set6a, set7a, set8a, set9, set10, set11, set12, set13, set14, set15, set16; 
+   //input length + base64 length
+    var len = cars.length+word.length;
+   var leg = cars.length;
+   
+   //top line of core field
+//check b64+input length for even or odd
+   if(len%2 === 0 && len%3 != 0 && len > mq) {
+    ck1 = 1;
+   }
+   else if(len%2 === 0 && len%3 != 0 && len < mq) {
+    ck1 = 0;
+   } 
+   else if(len%3 === 0 && len%2 != 0 && len > mq) {
+    ck1 = 1;
+   }
+   else if(len%3 === 0 && len%2 != 0 && len < mq) {
+    ck1 = 0;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len < mq){
+    ck1 = 0;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len > mq){
+    ck1 = 1;
+   }
+   else {
+    ck1 = 0;
+   } 
+   if(len%2 === 0 && len%3 != 0 && len > vc){
+    ck2 = 0;
+   }
+   else if(len%2 === 0 && len%3 != 0 && len < vc) {
+    ck2 = 1;
+   }
+   else if(len%3 === 0 && len%2 != 0 && len > vc){
+    ck2 = 0;
+   }
+   else if(len%3 === 0 && len%2 != 0 && len < vc){
+    ck2 = 1;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len < vc){
+    ck2 = 0;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len > vc){
+    ck2 = 1;
+   }
+   else  {
+    ck2 = 1;
+   }
+   if(len%2 === 0 && len%3 != 0 && len > sr) {
+    ck3 = 1;
+   }
+   else if(len%2 === 0 && len%3 != 0 && len < sr) {
+     ck3 = 0;
+    }
+   else if(len%3 === 0 && len%2 != 0 && len > sr){
+    ck3 = 1;
+   }
+   else if(len%3 === 0 && len%2 != 0 && len < sr){
+    ck3 = 1;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len < sr){
+    ck3 = 1;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len > sr){
+    ck3 = 0;
+   }
+   else  {
+    ck3 = 1;
+   }
+   if(len%2 === 0 && len%3 != 0  && len > po) {
+    ck4 = 1;
+   }
+   else if(len%2 === 0 && len%3 != 0 && len < po) {
+     ck4 = 1;
+    }
+   else if(len%3 === 0 && len%3 != 0 && len > po){
+    ck4 = 0;
+   }
+   else if(len%3 === 0 && len%3 != 0 && len < po){
+    ck4 = 0;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len < po){
+    ck4 = 0;
+   }
+   else if(len%2 != 0 && len%3 != 0 && len > po){
+    ck4 = 1;
+   }
+   else {
+     ck4 = 0;
+    }
+
+   
+   //second line of core field
+   //check if prime or not
+   //if prime, use double/triple prime, if not use not prime
+   var m,flag,number;
+		number = (text3/mq);
+
+		for(m=2; m <= number/2; m++)
+		{
+			if(number % m === 0)
+			{
+				flag = 0;	
+			}
+   else if(number % m != 0){
+    flag = 1;
+   }
+		}
+	if(flag == 0)
+		{
+			ck5 = 0;
+		}
+		 else if(flag == 1 && len < mq)
+		{
+			ck5 = 1;
+		}
+   else	if(flag == 1 && len > mq)
+		{
+			ck5 = 0;
+		}
+   else {
+    ck5 = 0;
+   }
+   var nm,flag2,number2;
+		number2 = text3/vc;
+
+		for(nm=2; nm <= number2/2; nm++)
+		{
+			if(number2 % nm === 0)
+			{
+				flag2 = 0;	
+			}
+   else if(number2 % nm != 0){
+    flag2 = 1;
+   }
+		}
+		if(flag2 === 1 && len < vc)
+		{
+  ck6 = 0;
+  }
+		else if(flag2 === 1 && len > vc)
+		{
+  ck6 = 1;
+  }
+		 else if(flag2 === 0)
+		{
+  ck6 = 1;
+  }
+   else {
+    ck6 = 1;
+   }
+var nn,flag3,number3;
+		number3 = text3;
+
+		for(nn=2; nn <= number3/2; nn++)
+		{
+			if(number3 % nn === 0)
+			{
+				flag3 = 0;	
+			}
+   else if(number3 % nn != 0){
+    flag3 = 1;
+   }
+		}
+	if(flag3 == 1 && len < sr)
+		{
+  ck7 = 0;
+  }
+   else if(flag3 == 1 && len > sr)
+		{
+  ck7 = 1;
+  }
+		 else if(flag3 == 0 && len < sr)
+		{
+  ck7 = 1;
+  }
+		 else if(flag3 == 0 && len > sr)
+		{
+  ck7 = 0;
+  }
+   else {
+    ck7 = 1;
+   }
+var mm,flag4,number4;
+		number4 = text3;
+
+		for(mm=2; mm <= number4/2; mm++)
+		{
+			if(number4 % mm === 0)
+			{
+				flag4 = 0;	
+			}
+   else if(number4 % mm != 0){
+    flag4 = 1;
+   }
+		}
+		if(flag4 == 1 && len > po)
+		{
+  ck8 = 0;
+  }
+		else if(flag4 == 1 && len < po)
+		{
+  ck8 = 1;
+  }
+	 else if(flag4 == 0 && len > po)
+		{
+  ck8 = 0;
+  }
+	 else if(flag4 == 0 && len < po)
+		{
+  ck8 = 1;
+  }
+   else {
+    ck8 = 0;
+   }
+
+   
+   
+   if(ck1 === 0 && ck5 === 0){
+    set1 = 0, set2 = 0;
+   }
+   else  if(ck1 === 1 && ck5 === 0){
+    set1 = 1, set2 = 0;
+   }
+    else if(ck1 === 0 && ck5 === 1){
+    set1 = 0, set2 = 1;
+   }
+    else if(ck1 === 1 && ck5 === 1){
+    set1 = 1, set2 = 1;
+   }
+   
+   
+   if(ck2 === 0 && ck6 === 0){
+    set3 = 0, set4 = 0;
+   }
+    else if(ck2 === 1 && ck6 === 0){
+    set3 = 1, set4 = 0;
+   }
+    else if(ck2 === 0 && ck6 === 1){
+    set3 = 0, set4 = 1;
+   }
+   else if(ck2 === 1 && ck6 === 1){
+    set3 = 1, set4 = 1;
+   }
+   
+   if(ck3 === 0 && ck7 === 0){
+    set5 = 0, set6 = 0;
+   }
+   else if(ck3 === 1 && ck7 === 0){
+    set5 = 1, set6 = 0;
+   }
+   else if(ck3 === 0 && ck7 === 1){
+    set5 = 0, set6 = 1;
+   }
+   else if(ck3 === 1 && ck7 === 1){
+    set5 = 1, set6 = 1;
+   }
+   
+   if(ck4 === 0 & ck8 === 0){
+    set7 = 0, set8 = 0;
+   }
+    else if(ck4 === 1 & ck8 === 0){
+    set7 = 1, set8 = 0;
+   }
+    else if(ck4 === 0 & ck8 === 1){
+    set7 = 0, set8 = 1;
+   }
+   else  if(ck4 === 1 & ck8 === 1){
+    set7 = 1, set8 = 1;
+   }
+   if(set1 === 0 & set2 === 0){
+    set9 = 0, set10 = 0;
+   }
+   else if(ck1 === 1 & ck2 === 0){
+    set9 = 0, set10 = 1;
+   }
+   else if(ck1 === 0 & ck2 === 1){
+    set9 = 1, set10 = 0;
+   }
+   else if(ck1 === 1 & ck2 === 1){
+    set9 = 1, set10 = 1;
+   }
+   if(ck3 === 0 & ck4 === 0){
+    set11 = 0, set12 = 0;
+   }
+   else if(ck3 === 1 & ck4 === 0){
+    set11 = 0, set12 = 1;
+   }
+   else if(ck3 === 0 & ck4 === 1){
+    set11 = 1, set12 = 0;
+   }
+   else if(ck3 === 1 & ck4 === 1){
+    set11 = 1, set12 = 1;
+   }
+   if(ck5 === 0 & ck6 === 0){
+    set13 = 0, set14 = 0;
+   }
+   else if(ck5 === 1 & ck6 === 0){
+    set13 = 0, set14 = 1;
+   }
+   else if(ck5 === 0 & ck6 === 1){
+    set13 = 1, set14 = 0;
+   }
+   else if(ck5 === 1 & ck6 === 1){
+    set13 = 1, set14 = 1;
+   }
+   if(ck7 === 0 & ck8 === 0){
+    set15 = 0, set16 = 0;
+   }
+   else if(ck7 === 1 & ck8 === 0){
+    set15 = 0, set16 = 1;
+   }
+   else if(ck7 === 0 & ck8 === 1){
+    set15 = 1, set16 = 0;
+   }
+   else if(ck7 === 1 & ck8 === 1){
+    set15 = 1, set16 = 1;
+   }
+   
+   var joinset1, joinset2, joinset3, joinset4;
+   
+   joinset1 = [set1]+[set2]+[set9]+[set10]; joinset2 = [set3]+[set4]+[set11]+[set12]; joinset3 = [set5]+[set6]+[set13]+[set14]; joinset4 = [set7]+[set8]+[set15]+[set16];
+    var joinset1a, joinset2a, joinset3a, joinset4a;
+   
+   joinset1a = [set9]+[set10]+[set1]+[set2]; joinset2a = [set11]+[set12]+[set3]+[set4]; joinset3a = [set13]+[set14]+[set5]+[set6]; joinset4a = [set15]+[set16]+[set7]+[set8];
+   
+   var rest1a, rest1b, rest1c, rest1d, rest2a, rest2b, rest2c, rest2d, rest3a, rest3b, rest3c, rest3d, rest4a, rest4b, rest4c, rest4d, rest1aa, rest1ba, rest1ca, rest1da, rest2ab, rest2bb, rest2cb, rest2db, rest3ac, rest3bc, rest3cc, rest3dc, rest4ad, rest4bd, rest4cd, rest4dd, left1aa, left1ba, left1ca, left1da, left2ab, left2bb, left2cb, left2db, left3ac, left3bc, left3cc, left3dc, left4ad, left4bd, left4cd, left4dd;
+ 
+   if(set1 === set9){
+    rest1a = 1;
+    rest1c = 1;
+    rest1ba = 1;
+    rest1da = 1;
+   }
+   else {
+    rest1a = 0;
+    rest1c = 0;
+    rest1ba = 0;
+    rest1da = 0;
+   }
+   if(set2 === set10) {
+    rest1b = 1;
+    rest1d = 1;
+    rest1aa = 1;
+    rest1ca = 1;
+   }
+   else {
+    rest1b = 0;
+    rest1d = 0;
+    rest1aa = 0;
+    rest1ca = 0;
+   }
+  
+    if(set3 === set11){
+    rest2a = 1;
+    rest2c = 1;
+    rest2bb = 1;
+    rest2db = 1;
+   }
+   else {
+    rest2a = 0;
+    rest2c = 0;
+    rest2bb = 0;
+    rest2db = 0;
+   }
+   if(set4 === set12) {
+   rest2b = 1;
+    rest2d = 1;
+    rest2ab = 1;
+    rest2cb = 1;
+   }
+   else {
+    rest2b = 0;
+    rest2d = 0;
+    rest2ab = 0;
+    rest2cb = 0;
+   }
+   
+   if(set5 === set13){
+    rest3a = 1;
+    rest3c = 1;
+    rest3bc = 1;
+    rest3dc = 1;
+   }
+   else {
+    rest3a = 0;
+    rest3c = 0;
+    rest3bc = 0;
+    rest3dc = 0;
+   }
+   if(set6 === set14) {
+    rest3b = 1;
+    rest3d = 1;
+    rest3ac = 1;
+    rest3cc = 1;
+   }
+   else {
+    rest3b = 0;
+    rest3d = 0;
+    rest3ac = 0;
+    rest3cc = 0;
+   }
+  
+    if(set7 === set15){
+    rest4a = 1;
+    rest4c = 1;
+    rest4bd = 1;
+    rest4dd = 1;
+   }
+   else {
+    rest4a = 0;
+    rest4c = 0;
+    rest4bd = 0;
+    rest4dd = 0;
+   }
+   if(set8 === set16) {
+   rest4b = 1;
+    rest4d = 1;
+    rest4ad = 1;
+    rest4cd = 1;
+   }
+   else {
+    rest4b = 0;
+    rest4d = 0;
+    rest4ad = 0;
+    rest4cd = 0;
+   }
+   
+   
+   
+    var left1a, left1b, left1c, left1d, left2a, left2b, left2c, left2d, left3a, left3b, left3c, left3d, left4a, left4b, left4c, left4d; 
+   if(set1 === set9 && set1 === rest1a){
+    left1a = 1; left1c = 1; 
+    
+   }else{
+    left1a = 0; left1c = 0;
+   }
+   if(set2 === set10 && set2 === rest1b){
+    left1b = 1; left1d = 1;
+    
+   }else{
+    left1b = 0; left1d = 0;
+   }
+   if(set3 === set11 && set3 === rest2c){
+    left2a = 1; left2c = 1;
+    
+   }else{
+    left2a = 0; left2c = 0;
+   }
+   if(set4 === set12 && set4 === rest2d){
+    left2b = 1; left2d = 1;
+    
+   }else{
+    left2b = 0; left2d = 0;
+   }
+   if(set5 === set13 && set5 === rest3a){
+    left3a = 1; left3c = 1;
+    
+   }else{
+    left3a = 0; left3c = 0;
+   }
+   if(set6 === set14 && set6 === rest3b){
+    left3b = 1; left3d = 1;
+    
+   }else{
+    left3b = 0; left3d = 0;
+   }
+   if(set7 === set15 && set7 === rest4c){
+    left4a = 1; left4c = 1;
+    
+   }else{
+    left4a = 0; left4c = 0;
+   }
+   if(set8 === set16 && set8 === rest4d){
+    left4b = 1; left4d = 1;
+    
+   }else{
+    left4b = 0; left4d = 0;
+   }
+    
+var joinset1b, joinset2b, joinset3b, joinset4b;
+  joinset1b = [set2]+[set1]+[set10]+[set9]; joinset2b = [set4]+[set3]+[set12]+[set11]; joinset3b = [set6]+[set5]+[set14]+[set13]; joinset4b = [set8]+[set7]+[set16]+[set15];
+    var joinset1c, joinset2c, joinset3c, joinset4c;
+   joinset1c = [set10]+[set9]+[set2]+[set1]; joinset2c = [set12]+[set11]+[set4]+[set3]; joinset3c = [set14]+[set13]+[set6]+[set5]; joinset4c = [set16]+[set15]+[set8]+[set7];
+   
+   if(set1 === set9 && set1 === rest1ba){
+    left1aa = 1; left1ca = 1; 
+    
+   }else{
+    left1aa = 0; left1ca = 0;
+   }
+   if(set2 === set10 && set2 === rest1aa){
+    left1ba = 1; left1da = 1;
+    
+   }else{
+    left1ba = 0; left1da = 0;
+   }
+   if(set3 === set11 && set3 === rest2db){
+    left2ab = 1; left2cb = 1;
+    
+   }else{
+    left2ab = 0; left2cb = 0;
+   }
+   if(set4 === set12 && set4 === rest2cb){
+    left2bb = 1; left2db = 1;
+    
+   }else{
+    left2bb = 0; left2db = 0;
+   }
+   if(set5 === set13 && set5 === rest3bc){
+    left3ac = 1; left3cc = 1;
+    
+   }else{
+    left3ac = 0; left3cc = 0;
+   }
+   if(set6 === set14 && set6 === rest3ac){
+    left3bc = 1; left3dc = "p";
+    
+   }else{
+    left3bc = 0; left3dc = 0;
+   }
+   if(set7 === set15 && set7 === rest4dd){
+    left4ad = 1; left4cd = 1;
+    
+   }else{
+    left4ad = 0; left4cd = 0;
+   }
+   if(set8 === set16 && set8 === rest4cd){
+    left4bd = 1; left4dd = 1;
+    
+   }else{
+    left4bd = 0; left4dd = 0;
+   }
+   
+   var rebuild1 = btoa([ck1]+[ck2]+[ck3]+[ck4]+[ck5]+[ck6]+[ck7]+[ck8]+[set1]+[set2]+[set3]+[set4]+[set5]+[set6]+[set7]+[set8]+[set9]+[set10]+[set11]+[set12]+[set13]+[set14]+[set15]+[set16]);
+   
+	return "<hr>"+text+"</br>"+dars+"<hr>"+text3+"</br>"+mark+"<hr>"+nexr1+"<hr><h2><sub>Z<sup><sub><u>ero</u></sub></sup>K<sup><sub><u>nowledge</u><sub></sup>P<sup><sub><u>roofs</u></sub></sup></sub></h2></br>&nbsp;"+ck1+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck2+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck3+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck4+"&nbsp;</br>&nbsp;"+ck5+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck6+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck7+"&nbsp;&nbsp;&nbsp;&nbsp;"+ck8+"&nbsp;</br>"+set1+""+set2+"&nbsp;&nbsp;"+set3+""+set4+"&nbsp;&nbsp;"+set5+""+set6+"&nbsp;&nbsp;"+set7+""+set8+"</br>"+set9+""+set10+"&nbsp;&nbsp;"+set11+""+set12+"&nbsp;&nbsp;"+set13+""+set14+"&nbsp;&nbsp;"+set15+""+set16+"<hr>"+joinset1+"&nbsp;"+joinset2+"&nbsp;"+joinset3+"&nbsp;"+joinset4+"&nbsp;&nbsp;"+joinset1b+"&nbsp;"+joinset2b+"&nbsp;"+joinset3b+"&nbsp;"+joinset4b+"</br>"+joinset1a+"&nbsp;"+joinset2a+"&nbsp;"+joinset3a+"&nbsp;"+joinset4a+"&nbsp;&nbsp;"+joinset1c+"&nbsp;"+joinset2c+"&nbsp;"+joinset3c+"&nbsp;"+joinset4c+"</br>"+rest1a+""+rest1b+""+rest1c+""+rest1d+"&nbsp;"+rest2a+""+rest2b+""+rest2c+""+rest2d+"&nbsp;"+rest3a+""+rest3b+""+rest3c+""+rest3d+"&nbsp;"+rest4a+""+rest4b+""+rest4c+""+rest4d+"&nbsp;&nbsp;"+rest1aa+""+rest1ba+""+rest1ca+""+rest1da+"&nbsp;"+rest2ab+""+rest2bb+""+rest2cb+""+rest2db+"&nbsp;"+rest3ac+""+rest3bc+""+rest3cc+""+rest3dc+"&nbsp;"+rest4ad+""+rest4bd+""+rest4cd+""+rest4dd+"</br>"+left1a+""+left1b+""+left1c+""+left1d+"&nbsp;"+left2a+""+left2b+""+left2c+""+left2d+"&nbsp;"+left3a+""+left3b+""+left3c+""+left3d+"&nbsp;"+left4a+""+left4b+""+left4c+""+left4d+"&nbsp;&nbsp;"+left1ba+""+left1aa+""+left1da+""+left1ca+"&nbsp;"+left2bb+""+left2ab+""+left2db+""+left2cb+"&nbsp;"+left3bc+""+left3ac+""+left3dc+""+left3cc+"&nbsp;"+left4bd+""+left4ad+""+left4dd+""+left4cd+"<hr></br></br>"+miner(rebuild1, ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, set1, set2, set3, set4, set5, set6, set7, set8, set1a, set2a, set3a, set4a, set5a, set6a, set7a, set8a, set9, set10, set11, set12, set13, set14, set15, set16, joinset1, joinset2, joinset3, joinset4, joinset1a, joinset2a, joinset3a, joinset4a, rest1a, rest1b, rest1c, rest1d, rest2a, rest2b, rest2c, rest2d, rest3a, rest3b, rest3c, rest3d, rest4a, rest4b, rest4c, rest4d, rest1aa, rest1ba, rest1ca, rest1da, rest2ab, rest2bb, rest2cb, rest2db, rest3ac, rest3bc, rest3cc, rest3dc, rest4ad, rest4bd, rest4cd, rest4dd, left1aa, left1ba, left1ca, left1da, left2ab, left2bb, left2cb, left2db, left3ac, left3bc, left3cc, left3dc, left4ad, left4bd, left4cd, left4dd, left1a, left1b, left1c, left1d, left2a, left2b, left2c, left2d, left3a, left3b, left3c, left3d, left4a, left4b, left4c, left4d);
+   
+
+  }
+console.log(ascii_to_base48(rebuild1));
+ 
+ 
+function miner(rebuild1, ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, set1, set2, set3, set4, set5, set6, set7, set8, set1a, set2a, set3a, set4a, set5a, set6a, set7a, set8a, set9, set10, set11, set12, set13, set14, set15, set16, joinset1, joinset2, joinset3, joinset4, joinset1a, joinset2a, joinset3a, joinset4a, rest1a, rest1b, rest1c, rest1d, rest2a, rest2b, rest2c, rest2d, rest3a, rest3b, rest3c, rest3d, rest4a, rest4b, rest4c, rest4d, rest1aa, rest1ba, rest1ca, rest1da, rest2ab, rest2bb, rest2cb, rest2db, rest3ac, rest3bc, rest3cc, rest3dc, rest4ad, rest4bd, rest4cd, rest4dd, left1aa, left1ba, left1ca, left1da, left2ab, left2bb, left2cb, left2db, left3ac, left3bc, left3cc, left3dc, left4ad, left4bd, left4cd, left4dd, left1a, left1b, left1c, left1d, left2a, left2b, left2c, left2d, left3a, left3b, left3c, left3d, left4a, left4b, left4c, left4d)   {
+  var core1 = atob(rebuild1);
+  var core1a, core1b, core1c, core1d, core1e, core1f;
+  core1a = [ck1]+[ck2]+[ck3]+[ck4];
+   core1b = [ck5]+[ck6]+[ck7]+[ck8];
+    core1c = [set1]+[set2]+[set3]+[set4];
+     core1d = [set5]+[set6]+[set7]+[set8];
+      core1e = [set9]+[set10]+[set11]+[set12]; 
+       core1f = [set13]+[set14]+[set15]+[set16];
+   var core1g = core1a+" "+core1b+"</br>"+core1c+" "+core1d+"</br>"+core1e+" "+core1f;
+  var full;
+  full = [[joinset1]+[joinset2]+[joinset3]+[joinset4]+" "+[joinset1a]+[joinset2a]+[joinset3a]+[joinset4a]+"</br> "+[rest1a]+[rest1b]+[rest1c]+[rest1d]+[rest2a]+[rest2b]+[rest2c]+[rest2d]+[rest3a]+[rest3b]+[rest3c]+[rest3d]+[rest4a]+[rest4b]+[rest4c]+[rest4d]+" "+[rest1aa]+[rest1ba]+[rest1ca]+[rest1da]+[rest2ab]+[rest2bb]+[rest2cb]+[rest2db]+[rest3ac]+[rest3bc]+[rest3cc]+[rest3dc]+[rest4ad]+[rest4bd]+[rest4cd]+[rest4dd]+"</br>"+[left1aa]+[left1ba]+[left1ca]+[left1da]+[left2ab]+[left2bb]+[left2cb]+[left2db]+[left3ac]+[left3bc]+[left3cc]+[left3dc]+[left4ad]+[left4bd]+[left4cd]+[left4dd]+" "+[left1a]+[left1b]+[left1c]+[left1d]+[left2a]+[left2b]+[left2c]+[left2d]+[left3a]+[left3b]+[left3c]+[left3d]+[left4a]+[left4b]+[left4c]+[left4d]];
+  var cars = core1; 
+var text = '';
+  var text44 = [];
+var i;
+for (i = 0; i < cars.length; i++) { //seperate per charcter
+  text += cars[i];
+  text44 = core1g;
+ 
+}
+  var jim = [];
+  jim += [joinset1]+[joinset2]+[joinset3]+[joinset4]+[joinset1a]+[joinset2a]+[joinset3a]+[joinset4a]+[rest1a]+[rest1b]+[rest1c]+[rest1d]+[rest2a]+[rest2b]+[rest2c]+[rest2d]+[rest3a]+[rest3b]+[rest3c]+[rest3d]+[rest4a]+[rest4b]+[rest4c]+[rest4d]+[rest1aa]+[rest1ba]+[rest1ca]+[rest1da]+[rest2ab]+[rest2bb]+[rest2cb]+[rest2db]+[rest3ac]+[rest3bc]+[rest3cc]+[rest3dc]+[rest4ad]+[rest4bd]+[rest4cd]+[rest4dd]+[left1aa]+[left1ba]+[left1ca]+[left1da]+[left2ab]+[left2bb]+[left2cb]+[left2db]+[left3ac]+[left3bc]+[left3cc]+[left3dc]+[left4ad]+[left4bd]+[left4cd]+[left4dd]+[left1a]+[left1b]+[left1c]+[left1d]+[left2a]+[left2b]+[left2c]+[left2d]+[left3a]+[left3b]+[left3c]+[left3d]+[left4a]+[left4b]+[left4c]+[left4d];
+ var corea = jim[0]+jim[1]+jim[2]+jim[3]+jim[4]+jim[5]+jim[6]+jim[7]+jim[8]+jim[9]+jim[10]+jim[11]+jim[12]+jim[13]+jim[14]+jim[15];
+ var coreb = jim[16]+jim[17]+jim[18]+jim[19]+jim[20]+jim[21]+jim[22]+jim[23]+jim[24]+jim[25]+jim[26]+jim[27]+jim[28]+jim[29]+jim[30]+jim[31];
+ var corec = jim[32]+jim[33]+jim[34]+jim[35]+jim[36]+jim[37]+jim[38]+jim[39]+jim[40]+jim[41]+jim[42]+jim[43]+jim[44]+jim[45]+jim[46]+jim[47];
+  var cored = jim[48]+jim[49]+jim[50]+jim[51]+jim[52]+jim[53]+jim[54]+jim[55]+jim[56]+jim[57]+jim[58]+jim[59]+jim[60]+jim[61]+jim[62]+jim[63];
+ var coree = jim[64]+jim[65]+jim[66]+jim[67]+jim[68]+jim[69]+jim[70]+jim[71]+jim[72]+jim[73]+jim[74]+jim[75]+jim[76]+jim[77]+jim[78]+jim[79];
+  var coref = jim[80]+jim[81]+jim[82]+jim[83]+jim[84]+jim[85]+jim[86]+jim[87]+jim[88]+jim[89]+jim[90]+jim[91]+jim[92]+jim[93]+jim[94]+jim[95];
+  
+  var mine1a, mine2a, mine3a, mine4a, mine5a, mine6a, mine7a, mine8a, mine9a, mine10a, mine11a, mine12a, mine13a, mine14a, mine15a, mine16a, mine1b, mine2b, mine3b, mine4b, mine5b, mine6b, mine7b, mine8b, mine9b, mine10b, mine11b, mine12b, mine13b, mine14b, mine15b, mine16b, mine1c, mine2c, mine3c, mine4c, mine5c, mine6c, mine7c, mine8c, mine9c, mine10c, mine11c, mine12c, mine13c, mine14c, mine15c, mine16c, mine1d, mine2d, mine3d, mine4d, mine5d, mine6d, mine7d, mine8d, mine9d, mine10d, mine11d, mine12d, mine13d, mine14d, mine15d, mine16d;
+
+  
+ if (jim[0] === jim[32] && jim[0] === jim[64]) {
+  mine1a = 1;
+ }
+  else {
+   mine1a = 0;
+  }
+ if (jim[1] === jim[33] && jim[1] === jim[65]) {
+  mine2a = 1;
+ }
+  else {
+   mine2a = 0;
+  }
+ if (jim[2] === jim[34] && jim[2] === jim[66]) {
+  mine3a = 1;
+ }
+  else {
+   mine3a = 0;
+  }
+ if (jim[3] === jim[35] && jim[3] === jim[67]) {
+  mine4a = 1;
+ }
+  else {
+   mine4a = 0;
+  }
+ if (jim[4] === jim[36] && jim[4] === jim[68]) {
+  mine5a = 1;
+ }
+  else {
+   mine5a = 0;
+  }
+ if (jim[5] === jim[37] && jim[5] === jim[69]) {
+  mine6a = 1;
+ }
+  else {
+   mine6a = 0;
+  }
+ if (jim[6] === jim[38] && jim[6] === jim[70]) {
+  mine7a = 1;
+ }
+  else {
+   mine7a = 0;
+  }
+ if (jim[7] === jim[39] && jim[7] === jim[71]) {
+  mine8a = 1;
+ }
+  else {
+   mine8a = 0;
+  } 
+ if (jim[8] === jim[40] && jim[8] === jim[72]) {
+  mine9a = 1;
+ }
+  else {
+   mine9a = 0;
+  }
+ if (jim[9] === jim[41] && jim[9] === jim[73]) {
+  mine10a = 1;
+ }
+  else {
+   mine10a = 0;
+  }
+ if (jim[10] === jim[42] && jim[10] === jim[74]) {
+  mine11a = 1;
+ }
+  else {
+   mine11a = 0;
+  }
+ if (jim[11] === jim[43] && jim[11] === jim[75]) {
+  mine12a = 1;
+ }
+  else {
+   mine12a = 0;
+  }
+ if (jim[12] === jim[44] && jim[12] === jim[76]) {
+  mine13a = 1;
+ }
+  else {
+   mine13a = 0;
+  }
+ if (jim[13] === jim[45] && jim[13] === jim[77]) {
+  mine14a = 1;
+ }
+  else {
+   mine14a = 0;
+  }
+ if (jim[14] === jim[46] && jim[14] === jim[78]) {
+  mine15a = 1;
+ }
+  else {
+   mine15a = 0;
+  }
+ if (jim[15] === jim[47] && jim[15] === jim[79]) {
+  mine16a = 1;
+ }
+  else {
+   mine16a = 0;
+  }
+ 
+ if (jim[16] === jim[48] && jim[16] === jim[80]) {
+  mine1b = 1;
+ }
+  else {
+   mine1b = 0;
+  }
+ if (jim[17] === jim[49] && jim[17] === jim[81]) {
+  mine2b = 1;
+ }
+  else {
+   mine2b = 0;
+  }
+ if (jim[18] === jim[50] && jim[18] === jim[82]) {
+  mine3b = 1;
+ }
+  else {
+   mine3b = 0;
+  }
+ if (jim[19] === jim[51] && jim[19] === jim[83]) {
+  mine4b = 1;
+ }
+  else {
+   mine4b = 0;
+  }
+ if (jim[20] === jim[52] && jim[20] === jim[84]) {
+  mine5b = 1;
+ }
+  else {
+   mine5b = 0;
+  }
+ if (jim[21] === jim[53] && jim[21] === jim[85]) {
+  mine6b = 1;
+ }
+  else {
+   mine6b = 0;
+  }
+ if (jim[22] === jim[54] && jim[22] === jim[86]) {
+  mine7b = 1;
+ }
+  else {
+   mine7b = 0;
+  }
+ if (jim[23] === jim[55] && jim[23] === jim[87]) {
+  mine8b = 1;
+ }
+  else {
+   mine8b = 0;
+  } 
+ if (jim[24] === jim[56] && jim[24] === jim[88]) {
+  mine9b = 1;
+ }
+  else {
+   mine9b = 0;
+  }
+ if (jim[25] === jim[57] && jim[25] === jim[89]) {
+  mine10b = 1;
+ }
+  else {
+   mine10b = 0;
+  }
+ if (jim[26] === jim[58] && jim[26] === jim[90]) {
+  mine11b = 1;
+ }
+  else {
+   mine11b = 0;
+  }
+ if (jim[27] === jim[59] && jim[27] === jim[91]) {
+  mine12b = 1;
+ }
+  else {
+   mine12b = 0;
+  }
+ if (jim[28] === jim[60] && jim[28] === jim[92]) {
+  mine13b = 1;
+ }
+  else {
+   mine13b = 0;
+  }
+ if (jim[29] === jim[61] && jim[29] === jim[93]) {
+  mine14b = 1;
+ }
+  else {
+   mine14b = 0;
+  }
+ if (jim[30] === jim[62] && jim[30] === jim[94]) {
+  mine15b = 1;
+ }
+  else {
+   mine15b = 0;
+  }
+ if (jim[31] === jim[63] && jim[31] === jim[95]) {
+  mine16b = 1;
+ }
+  else {
+   mine16b = 0;
+  }
+ 
+  var gid = [];
+ gid += [mine1a]+[mine2a]+[mine3a]+[mine4a]+[mine5a]+[mine6a]+[mine7a]+[mine8a]+[mine9a]+[mine10a]+[mine11a]+[mine12a]+[mine13a]+[mine14a]+[mine15a]+[mine16a]+[mine1b]+[mine2b]+[mine3b]+[mine4b]+[mine5b]+[mine6b]+[mine7b]+[mine8b]+[mine9b]+[mine10b]+[mine11b]+[mine12b]+[mine13b]+[mine14b]+[mine15b]+[mine16b];
+  
+  
+ if (jim[0] === jim[32] && jim[0] === jim[64] && jim[0] === gid[0]) {
+  mine1c = 1;
+ }
+  else {
+   mine1c = 0;
+  }
+ if (jim[1] === jim[33] && jim[1] === jim[65] && jim[1] === gid[1]) {
+  mine2c = 1;
+ }
+  else {
+   mine2c = 0;
+  }
+ if (jim[2] === jim[34] && jim[2] === jim[66] && jim[2] === gid[2]) {
+  mine3c = 1;
+ }
+  else {
+   mine3c = 0;
+  }
+ if (jim[3] === jim[35] && jim[3] === jim[67] && jim[3] === gid[3]) {
+  mine4c = 1;
+ }
+  else {
+   mine4c = 0;
+  }
+ if (jim[4] === jim[36] && jim[4] === jim[68] && jim[4] === gid[4]) {
+  mine5c = 1;
+ }
+  else {
+   mine5c = 0;
+  }
+ if (jim[5] === jim[37] && jim[5] === jim[69] && jim[5] === gid[5]) {
+  mine6c = 1;
+ }
+  else {
+   mine6c = 0;
+  }
+ if (jim[6] === jim[38] && jim[6] === jim[70] && jim[6] === gid[6]) {
+  mine7c = 1;
+ }
+  else {
+   mine7c = 0;
+  }
+ if (jim[7] === jim[39] && jim[7] === jim[71] && jim[7] === gid[7]) {
+  mine8c = 1;
+ }
+  else {
+   mine8c = 0;
+  } 
+ if (jim[8] === jim[40] && jim[8] === jim[72] && jim[8] === gid[8]) {
+  mine9c = 1;
+ }
+  else {
+   mine9c = 0;
+  }
+ if (jim[9] === jim[41] && jim[9] === jim[73] && jim[9] === gid[9]) {
+  mine10c = 1;
+ }
+  else {
+   mine10c = 0;
+  }
+ if (jim[10] === jim[42] && jim[10] === jim[74] && jim[10] === gid[10]) {
+  mine11c = 1;
+ }
+  else {
+   mine11c = 0;
+  }
+ if (jim[11] === jim[43] && jim[11] === jim[75] && jim[11] === gid[11]) {
+  mine12c = 1;
+ }
+  else {
+   mine12c = 0;
+  }
+ if (jim[12] === jim[44] && jim[12] === jim[76] && jim[12] === gid[12]) {
+  mine13c = 1;
+ }
+  else {
+   mine13c = 0;
+  }
+ if (jim[13] === jim[45] && jim[13] === jim[77] && jim[13] === gid[13]) {
+  mine14c = 1;
+ }
+  else {
+   mine14c = 0;
+  }
+ if (jim[14] === jim[46] && jim[14] === jim[78] && jim[14] === gid[14]) {
+  mine15c = 1;
+ }
+  else {
+   mine15c = 0;
+  }
+ if (jim[15] === jim[47] && jim[15] === jim[79] && jim[15] === gid[15]) {
+  mine16c = 1;
+ }
+  else {
+   mine16c = 0;
+  }
+ 
+ if (jim[16] === jim[48] && jim[16] === jim[80] && jim[16] === gid[16]) {
+  mine1d = 1;
+ }
+  else {
+   mine1d = 0;
+  }
+ if (jim[17] === jim[49] && jim[17] === jim[81] && jim[17] === gid[17]) {
+  mine2d = 1;
+ }
+  else {
+   mine2d = 0;
+  }
+ if (jim[18] === jim[50] && jim[18] === jim[82] && jim[18] === gid[18]) {
+  mine3d = 1;
+ }
+  else {
+   mine3d = 0;
+  }
+ if (jim[19] === jim[51] && jim[19] === jim[83] && jim[19] === gid[19]) {
+  mine4d = 1;
+ }
+  else {
+   mine4d = 0;
+  }
+ if (jim[20] === jim[52] && jim[20] === jim[84] && jim[20] === gid[20]) {
+  mine5d = 1;
+ }
+  else {
+   mine5d = 0;
+  }
+ if (jim[21] === jim[53] && jim[21] === jim[85] && jim[21] === gid[21]) {
+  mine6d = 1;
+ }
+  else {
+   mine6d = 0;
+  }
+ if (jim[22] === jim[54] && jim[22] === jim[86] && jim[22] === gid[22]) {
+  mine7d = 1;
+ }
+  else {
+   mine7d = 0;
+  }
+ if (jim[23] === jim[55] && jim[23] === jim[87] && jim[23] === gid[23]) {
+  mine8d = 1;
+ }
+  else {
+   mine8d = 0;
+  } 
+ if (jim[24] === jim[56] && jim[24] === jim[88] && jim[24] === gid[24]) {
+  mine9d = 1;
+ }
+  else {
+   mine9d = 0;
+  }
+ if (jim[25] === jim[57] && jim[25] === jim[89] && jim[25] === gid[25]) {
+  mine10d = 1;
+ }
+  else {
+   mine10d = 0;
+  }
+ if (jim[26] === jim[58] && jim[26] === jim[90] && jim[26] === gid[26]) {
+  mine11d = 1;
+ }
+  else {
+   mine11d = 0;
+  }
+ if (jim[27] === jim[59] && jim[27] === jim[91] && jim[27] === gid[27]) {
+  mine12d = 1;
+ }
+  else {
+   mine12d = 0;
+  }
+ if (jim[28] === jim[60] && jim[28] === jim[92] && jim[28] === gid[28]) {
+  mine13d = 1;
+ }
+  else {
+   mine13d = 0;
+  }
+ if (jim[29] === jim[61] && jim[29] === jim[93] && jim[29] === gid[29]) {
+  mine14d = 1;
+ }
+  else {
+   mine14d = 0;
+  }
+ if (jim[30] === jim[62] && jim[30] === jim[94] && jim[30] === gid[30]) {
+  mine15d = 1;
+ }
+  else {
+   mine15d = 0;
+  }
+ if (jim[31] === jim[63] && jim[31] === jim[95] && jim[31] === gid[31]) {
+  mine16d = 1;
+ }
+  else {
+   mine16d = 0;
+  }
+ 
+  var mine1e, mine2e, mine3e, mine4e, mine5e, mine6e, mine7e, mine8e, mine9e, mine10e, mine11e, mine12e, mine13e, mine14e, mine15e, mine16e, mine1f, mine2f, mine3f, mine4f, mine5f, mine6f, mine7f, mine8f, mine9f, mine10f, mine11f, mine12f, mine13f, mine14f, mine15f, mine16f;
+ 
+ var pcd = document.getElementById('pcodein').value;
+ 
+var adding = [];
+ var hex = [];
+ var str2 = pcd;
+ var arr1 = [];
+	for (var n = 0, l = pcd.length; n < l; n ++) 
+     {
+	 hex = pcd[n].charCodeAt(0).toString(2);
+		arr1.push(hex);
+	 
+     }
+ var hexed = arr1.join('');
+ 
+ 
+var hedd = hexed.length/2;
+ var jedd = hedd+1;
+adding = hexed.substr(0, hedd+1)+" "+hexed.substr(jedd, hexed.length);
+ var addsign = "</br>"+btoa(pcd)+" ["+pcd.length+"]</br>"+btoa(arr1.join(' '))+" ["+hexed.length+"]";
+ 
+ 
+ 
+  var findit = "Entangling Not Yet Available</br></br><hr>";
+ 
+ var runner = full+mine1a+mine2a+mine3a+mine4a+mine5a+mine6a+mine7a+mine8a+mine9a+mine10a+mine11a+mine12a+mine13a+mine14a+mine15a+mine16a+mine1c+mine2c+mine3c+mine4c+mine5c+mine6c+mine7c+mine8c+mine9c+mine10c+mine11c+mine12c+mine13c+mine14c+mine15c+mine16c+mine1d+mine2d+mine3d+mine4d+mine5d+mine6d+mine7d+mine8d+mine9d+mine10d+mine11d+mine12d+mine13d+mine14d+mine15d+mine16d+adding;
+ 
+ var miners = full+mine1a+mine2a+mine3a+mine4a+mine5a+mine6a+mine7a+mine8a+mine9a+mine10a+mine11a+mine12a+mine13a+mine14a+mine15a+mine16a+mine1c+mine2c+mine3c+mine4c+mine5c+mine6c+mine7c+mine8c+mine9c+mine10c+mine11c+mine12c+mine13c+mine14c+mine15c+mine16c+mine1d+mine2d+mine3d+mine4d+mine5d+mine6d+mine7d+mine8d+mine9d+mine10d+mine11d+mine12d+mine13d+mine14d+mine15d+mine16d;
+ 
+ var coresign = "BIN Core {"+btoa(rebuild1)+"}     BASE64 Core {"+rebuild1+"}";
+ 
+ var personal = "BIN Field {"+btoa(full)+"}     Addsign {"+btoa(addsign)+"}";
+ var dated = new Date();
+ var dated2 = "Dates {"+dated+"}     {"+dated.getMilliseconds()+"}";
+ var signpack = "Core {"+btoa(coresign)+"      Programable Section {"+btoa(arr1)+"}     Personal Meta {"+btoa(personal)+"}          Mining {"+btoa(miners)+"}     Date {"+btoa(dated2)+"}";
+ 
+ 
+ 
+  document.getElementById('binfld').innerHTML = btoa(full);
+  document.getElementById('binsig').innerHTML = btoa(rebuild1);
+  document.getElementById('binsq').innerHTML = btoa(core1a+" "+core1b+"   "+core1c+" "+core1d+"   "+core1e+" "+core1f);
+  document.getElementById('mined').innerHTML = btoa(miners);
+  document.getElementById('text44').innerHTML = text44;
+  document.getElementById('core1').innerHTML = core1;
+  document.getElementById('corea').innerHTML = corea;
+  document.getElementById('coreb').innerHTML = coreb;
+  document.getElementById('corec').innerHTML = corec;
+  document.getElementById('cored').innerHTML = cored;
+  document.getElementById('coree').innerHTML = coree;
+  document.getElementById('coref').innerHTML = coref;
+  document.getElementById('full').innerHTML = full;
+  document.getElementById('mineblock').innerHTML = ""+mine1a+mine2a+mine3a+mine4a+mine5a+mine6a+mine7a+mine8a+mine9a+mine10a+mine11a+mine12a+mine13a+mine14a+mine15a+mine16a+" "+mine1b+mine2b+mine3b+mine4b+mine5b+mine6b+mine7b+mine8b+mine9b+mine10b+mine11b+mine12b+mine13b+mine14b+mine15b+mine16b+"</br>"+mine1c+mine2c+mine3c+mine4c+mine5c+mine6c+mine7c+mine8c+mine9c+mine10c+mine11c+mine12c+mine13c+mine14c+mine15c+mine16c+" "+mine1d+mine2d+mine3d+mine4d+mine5d+mine6d+mine7d+mine8d+mine9d+mine10d+mine11d+mine12d+mine13d+mine14d+mine15d+mine16d+"";
+  document.getElementById('findit').innerHTML = findit;
+  document.getElementById('adding').innerHTML = adding;
+  document.getElementById('signpack').innerHTML = "#"+btoa(signpack);
+ 
+ 
+ 
+  return "<h1>B<sup><sub><u>uild</u></sub></sup> D<sup><sub><u>ata</u></sub></sup>:  </h1><hr><p align='left' style='align:left'>BIN Core: "+core1+"</br><span>&#9997;</span> &nbsp;<span id='binsign'></span></br></br></br>BIN Square: </p>"+text44+"<p align='left' style='align:left'></br></br>BIN Field: </p>"+corea+" "+coreb+"</br>"+corec+" "+cored+"</br>"+coree+" "+coref+"</br><hr></br></br><h2>M<sup><sub><u>ining</u></sub></sup>:</h2></br></br><span style='color:orange;'>"+full+"</span></br>"+mine1a+mine2a+mine3a+mine4a+mine5a+mine6a+mine7a+mine8a+mine9a+mine10a+mine11a+mine12a+mine13a+mine14a+mine15a+mine16a+" "+mine1b+mine2b+mine3b+mine4b+mine5b+mine6b+mine7b+mine8b+mine9b+mine10b+mine11b+mine12b+mine13b+mine14b+mine15b+mine16b+"</br>"+mine1c+mine2c+mine3c+mine4c+mine5c+mine6c+mine7c+mine8c+mine9c+mine10c+mine11c+mine12c+mine13c+mine14c+mine15c+mine16c+" "+mine1d+mine2d+mine3d+mine4d+mine5d+mine6d+mine7d+mine8d+mine9d+mine10d+mine11d+mine12d+mine13d+mine14d+mine15d+mine16d+"</br>"+adding+"<br></br></span></br><hr></br>"+findit+"</br><hr><p align='left' style='align:left'>Signatures: </p></br>#"+btoa(signpack);
+  
+ }
+ 
+</script>
+</body>
