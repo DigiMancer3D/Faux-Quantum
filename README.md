@@ -1,56 +1,101 @@
-# Faux-Quantum
-Starting with building binary fields based on input data, eventually will also entangle the input or data based from the input to the binary field(s).
+# Faux-Quantum (Faux-Qbit Generator)
 
-<a href="https://drive.google.com/uc?export=download&id=16ikTX7KYkfujEsIo-zaDsWEN58IBBKaS" target="_blank">Read more about the concept.</a>
+**Faux-Quantum** is a single-file creative coding experiment that turns any short text into dense, visually rich pseudo-quantum binary structures. It feels like a miniature quantum computer simulator, but everything runs instantly in your browser using clever (and intentionally over-the-top) mathematics.
 
-The idea of building a binary field based on other data without containing that data is the first tackle. The working version (<sup><sub>hashlink below</sub></sup>) encodes the input to a Base64 string so this string is reversable back to our input. We also find the dec value of the Base64, character per character, output as a long string. After that it uses the base64 or equivalent dec string to find the a-number then an acceptable vlaue range based off the a-number (low-low | low-high | high-low | high-high). The first binary field (the field core) is generated based on the acceptable value range determinations. The final field (the minable field) is generated based on the end result of the field core. Every 3rd & 4th line in the final field checks for filter pass possiblity based on the previous two lines. 
+Type something → watch it get transformed through stacked roots, parity checks, prime detection, bit recombination, and "mining" layers.
 
-Not being used nor coded-in yet, there is a programable section in the field core and final field during the filter-passes when a null-string is found. In order to use this section of the fields, the programable section needs be a series of options that's either on or off. The aviable room will differ per build.
+## Live Demo
+Just open **`Faux-Qbit-Generator.html`** in any browser (100% offline).
 
-Eventually field mining will be added to gain additional programmable sections as well as increase entropy of the field and gain new bit-positions.
+---
 
-The fields should be stored in Base64 or Base128. The Base-versions of the core and final field should be stored in seperate. The field core can be found in a single build final field but in a mined field with entropy will make finding the core much more difficult. A mined field without entropy will not make finding the core harder nor change the difficulty to retrace. 
+## How This Demo Works
 
-Not yet coded is the mining of a field. In the concept paper there's two main ways to mine the field but there's room to grow. 
+### Step-by-Step Transformation
 
-Entropy mining is using the Base64 of any selected sections or just the programmed sections to be used as the input to find another set of the same data as well as second field outputs (core and final). After this the two fields are merged (not yet determined in method for merging) for futhure entropy.
+1. **Input → Base64 + Character Codes**
+   - Text is turned into Base64 (`btoa()`).
+   - Each character’s ASCII value is extracted.
 
-Non-Entropy mining has two methods, the first is entropy mining except the new block is placed either ontop or below the current block, this is switched or not switched per new final field block. 
+2. **Length Magic**
+   - `len` = input length + Base64 length.
+   - Multiple reference values are calculated:
+     - `mq` = 16th root of a derived number (extreme compression feel)
+     - `vc` = stacked power/square-root
+     - `sr` = square root
+     - `po` = squared value
 
-The second type of non-entropy mining is simply finding missing bit-combinations of the previous block and adding it to the top or bottom of the current block forming a larger new block.
+3. **Core Bit Generation (ck1–ck8)**
+   - Each `ck` bit is decided by a combination of:
+     - Even/Odd (`% 2`)
+     - Divisible by 3 (`% 3`)
+     - Comparison against the reference values (`len > mq`, `len < vc`, etc.)
 
-The entropy in mining is through the programming sections of fields and the merging process (zipper | null-swaps | swap-spots | every-Nth | merge-Rebuild). 
+4. **Prime Detection**
+   - A simple trial-division loop checks if derived numbers are prime → sets flags that influence later bits.
 
-Another entropy process not yet coded is a No Knowledge Base Strings to use instead of the direct input. This is better explained in the concept paper.
+5. **Multi-Layer Bit Fields**
+   - `set1`–`set16` → first 4×4 grid of bits
+   - `joinset` arrays → recombine bits in different orders (forward, reverse, shifted)
+   - `rest` arrays → detect equality between layers (creates repeating patterns)
+   - `left` arrays → further cross-checks and flips
 
-A working early version of the Faux-Quantum Bits. <a href="https://itty.bitty.site/#/data:text/html;charset=utf-8;bxze64,XQAAAAIDjwAAAAAAAAAeHMqHyTY4PyKmqfkwr6ooCXSIMxPQ7ojnoHG+l0DNJitIMjjLGB16qpP/XaxDaCrfB5mUyay5ezuja/nwmp2aMA8SS2jGrX5PlFhwj7ml570SmS4GBQaUvOv55Mg61ViW1zYEQT4HXJyU3yjNYfnU6i/8mjLLPK5tc4AVvRzDPjcKjBMeyuyuZ44iHp+pSOuzGQKbTuD2jWFqlvOHMWb+kiMwVTP1JayXfSatAZ5UTv61WrNq854otpfYJvR1AgxVUsCEaw6O+E6wMDuhY/JxwDEacYYJHSa4WBJ1md1tqAHEhBx+oSmfJVbcYbCAdI0unf5URQGBad8z4KeLOEt34BrkXHtqhlQhzu1mabIrqjhMAM14Q4SQQdX9cRKYQMc2vr5qFEk++2zaXJmIy6vYlZB7Z8Cte5Y8MlznHeuldXlhVZr95RToqTjDYgmiMORMF2KFO8xioZ/S6iE5g2EDJv13GDLm698pmRB/vj0slmftadkdjOeJ6YiZgg395/acI1S7X3a33zqL8Z4I0wDTaCxlKwhc7XGKt3FZ/HoJHj8gkLdZTzM2zsifSaLB+GtXSN6OXcpJxarFU5J/O8Zp8OL7a2JXWWOQURIIX+Ak09nuSGRoJ6pxj8lV/GdPDDfkPqQJpM4U9ElTh6Sh2vt6Zt2VlFElT5Xsg3gyBdOVMkebyCqr7db7IIiyu6aISidQFPWPEz/DCDddYjzyknClvWGMt/vQSzSZ16k8KPZYz1U/qWr4COfE1/73z6slNrWD50yVpss8sy5sSXKaJ7QA/hzZ1Gu6Lux5yGCH0PePLYwHKmJCrZ//avtTRw7hp758nI8UN8CYXOow10kNjQZmkX0aXUQeS3pjO+2WllINTz4yEQhfYZ+ygeu+g7mAFkQzn+Idx52ufqzpfcjr83x9ghUHH9gRA2VnvnsNeqNgX/8QKFzgLs0kAubH5VaWTX2c9C2mguNc6nGG0kT30R3t7txSzvVN1g5HFzkZCxG8FaIvOcMc4dTs5irqQtIa3fE0EQvsRGzWs+G6mJir3YIod6GWDXddUEQ+GIhUw68cjxQJksxizmxuj9oOqgtFTg50xU74sDMUcM673xtwryGJqjtmXnt3xuNKnRwDp4wohEKNAhcyDllt59fhmUwSbZaa118RJFDz0eUojhsPmpXvsUVmALj8W+U1GMxnzJui+4pRwsaiMuo/SYmWjpcb0je0LlvOTM6nkKsNqO1IBwT9Le0XVXU7dOjRpcltTDpclsXO/qYr43f2Ooy8vPK5Ywlsk4e7cLeeYHYhdde1Xqw6eQO8cV7nA/3MVXRb9YeMzhhvRz8LlwZnL13/Ew49j/u4AKuH/4/KdDgswCywwXFYPLzQgGk/CZvjSyg3VYSE+Y2DduUFDAl+HvIk6paQcWSKiOcnLu21ZnxFL0jtL1wYep+r2LdBGmSkrsdWrsawJGAg4DDp1xdcou4sPQCE7FhBHW+I6G6aKcrsBuY0hOhi3bXF4P/dwdzzBmEM/qNFFPWS4o93GGNe6EF5GrIm21nOZ/48n5bCZ39TG7egIF3lhx832qRj1GhVBvDjPDhJXCxyQ9IocR77YAHOwTOJGE+KYzkPzFlnB8fclznX3sp5D9pgzpgTx/j5zRP6B0Yy1T1DvycuMGmQtIi2qPoa98t0xdI/N1Vo09HITFwb+ezgaU6KpMAqw837C6YPmgbD01sRMxyKoQrhTsHpQTsEd/1fb1J+SxT9A4y0E07EIsU2c5eiCvf67cSvJ4Ci5Nu+a0+12srJ7CWsKEGOCAgVRMadnFmLBox5vgtIVbXiP+gwDBUt+79VXiEmFFo9p+0iDusJusqqNVMj/v1n7eqd/jPr4TeXLZxY1X9wJ7fyp/uvLjXDQiwg5fEM6q6VUEjK4l7otlGTE95mt1v74e0BCV7DK1Lf8F/xqycyyRxgmzoSZZpqpVQRmLJeQjjiY0anMZClLzr/j1u6Gpgo6XoQML4Ln57t1KZDBRsB9PX8+tAQVqpIl7v/g7mpeFKAww+IR/b62oOvYmw/FiWRj+4FRnM/p3p6w/hPHdCQLFWnx5BQ8TBIEg+J4u7v6Ahzq9Bco6g9K4U9U+iqnd4TJPRjf8wQ6tnZVOOwIWPJT/2eOnWy9UiMRrWTmIYvyzgZnHdQ7RJhy/0k1awrYV5X/LzOpCLQnbv7Do5V91X4t4NlVrptq5UgLC/1VwlyDukMLYV9GBQGynzaIsbXxIkfJcmcsewZD6oDl95nRN3EdsuafsG/+BT/YHbWc0kBhXmn0yr/DeGnvvfnPW16xOdkrcrhU+4akAisF8zIHX10yu3HqeCpwknuQjcB8uJXjWdlGohGAdpQHZ7NQLDulgBGNDtp56EJ8hb4tVXfMhBWl9bh0qoOYhQdRQus0A+7Z7ktEHTV0YZhSv4mhgQvQmS72eRTxoC8K9lvvq3I4QHwlI5wewJB/1/CtWxtsQe6GLBi3Txr3vfROMHYnUN4fZsEoEnojeHaaO/rrMQSCm76Gq96zy+UTQORu816XXbbSO7jvs9hSvTi0tfjCkpW5u77XzzQmWGsl3Xfc6JgxYYhK1BgAlUm+NEopFopKpebLMrcoLZfYGSfD5pAziMJ/L7rEsdNVtu+JcLsXCgcqsDIBE1u4tHN7IEB+73TmRqOomi1m+kZscc4QjCg2SHkiVv+z7S/F0uflVDA3XJIr5Ad/mWmRg4noDAH8wGjKI2XBSnW7mFuTv8SpgteD56HCtinsyK7qKgMs2CoaHZZhdoP+TgapsnNHRxGhfjSziEZ2dH/89zZJI5tssf9j4D7KqwLLZRJJk2uZgjpHoCraiU0XXM5oz96woQeCUe1EzmrzmasMOh7CkHsjYOxcZpTSkBrq9DyV5nJGoxvDt9+hdzebIFp6KntEnFOdYq1eqBxiIzE8BNLYqRShSryPXr/W6oLzsgROb5Z3f2MqgTi4LiFt1X0dwg66NwXMuA37Y5b/1t0nQirB9CIDlfWsTV9Az9tn6MsBeshK7tywhmp3ZE6FjpG+0tUiLYXoipFkK6lQXbFhIl7I7YxTQLerfyY8CAvph0GmOWFNb7zDpHDNMS9XS677a2sf82HpJ5fXBbdHBh6wRC642cujhcjgws/4u7IWnDqwJBnLvluXFmVhvI9b7yPFTS00mPmsdxZrhU2fYJ6iwDFE/8bsfL2/RmIfY4gve6MQ5lVucr14crDzLxCp8wRPuTHO7cc8gY84v5khGg9mt+QRknFi5jdYrWyVrtqrNdO26MdI0rNTAu4bLwXQWn2I0c2GzXBrZ6hLlJeLb0DSW4vG0U2Lc6yUYQ9OguZkMTLp1IlwSHrIPNMSGFC2ZJPdw6GLghRwYECOcA3wbcuGbKHF+OtSaO2V/86kO5ogs4DThH65zB57yFpAg6DbRuYSSs1NvIHYoBX5cee2jU4hlfJ7ff2WtDzJS58NW8ta4J4XF9aoN1iuhRzwXawy+HEo1X5qJmJGx39/8zgUMZ0uPmflGf7CUbsJWZ4PgF+hfccixCRsNuyYiCursyD++3e7FyZel/jUibvcbwg+YLc3uSfLb+Gr8sgjyek9JXUw40XfPeZgOOokY4QURJlrcpEcVrLvW2jjjvopcy5jUqAO356mgHxwtOK0Iea6TldusMVdTfz0nbmNwf2Exp48ULh7J3NlC4se8cGDWhLIN0BiJF8BJ8bBgz+fsQxF7Xbh3DdpQRi10tagMcsjHnezEcru+SATzXb/fswc4529CyFqB3p5QZtFRqmLs7B1/2YoSXRvvYtoUQfp5x2kJbobxPoJjLdrQHpXAmxaWPN2FaltSgW7FEFU2+lQvMcml18A0774QOPliC6YRaXKFdvOdOFCHgE1wyIXCQp+kDpaoTwRqXBNzFDqF+3TxMn2tm6nl5b0L0kNugeZ3rUgBOueevnZF2bBUP5m1p6cUGMWFQF4bLSHc+hadaELkCJ2mQTxONaJAS2FojKDSMrjdslJEBb7K7Ra/HyWw29WMbkJJiIstjrgJlr63mDzx5W9zFqckTU0FdjgPOOnDvx6N+5R6sYzHlthKIPeXtGN74JpWylZh0WqyI0MnzEUfeLkLsK3vw4zPfO0WGGYiEYRuYXABp7qBNdtBowVI0fEk3tWwxUtS2j1Knqsx5tJeVQF3+v0gy0v4c4YPiP9iokRfTzV95zWBzhy2j0lPQAqFICA/IBAvCQRRn/YkC6aPDAZwcNjfmUNSYbQihp3lts6wE7zpPi47PfA4SW6FV/oO37lim+7tW2E4wjh3skgqIgF4rfbnnpm13SmCbAHIHVKH/wMRxDncSbF/bKAP5ecmU3gWomRO1srTbBC8YC8HGLuQU66oGtae/EkpEVVJFFjn/iR0uAj7nMYGDMBrpnYuiJzk4a5ZVRubtiu07FYmphGgEXDwg3aRJ+6F2JDR5rq6jhHeuc5nmT9Bhtq6nF427n91mTPUP35J2AQ2gKRz4E/VE+jCX2Z53+I3+hkufHb2BJUdBq45nyzLoV3wXL0SUyUHEo4G5o95/pMV6asNaTBnWF40MvHne0bvMfIRzQqStFzqUjzUwp40LEht2Elco2gWeIDi0HklsJSVZMCZo2cZj8xO+H0HYbNic4zms+V+jvNYzKRWJfDai1WxxQ0t06PK7KUKoOdpYPFNJRdDcEbMxNq0Bxo524raXxD02R69vALP5RFrw1uOdrGPZQjkEBU3QwNEprfZwpr3uQt6OTuwSdfJ3ncQ34lTarEaNq2cEBDMG+vEAUh9g8hCEWpG1jhQ9A4iYjAAu4j9Uy/UjyZy7heqn8258tp+c81+UExvYQb4kfqYzpEZshSwB8YO1od8LcBWgC3kqHtwIQO3KaDAouu+tQpfSDWjg4DEpDjMiSXG6ForbVNXXBwJcpn2t0PX4jeBd4WOvoF2KPb52/DTTDkpcE4N5WGwDA1KqOtbKeRHXLf6R39TNnwuyiNf589X1ZPQhxL03i6p0ss3v/1YMJ8d8uWVWdTAmRWi9MD/AsVVS2o4tL2UEqwxumB7tHcML3qB4kYVmnvIygBKpnqrEYtrB9oDv6xakGNB8Qzp2XJTcwT8FwvotIrrIVgMtuAWoGgWGB2hJEH+lrNnTmPa+xv9MIq+vLamQWfhoffEAYE4GjA+jLhprY80afBff4aKc9InJYbFcjnQtOyvmoB+fq6YjwqcqMHsI93ddmDBEMNYPiVnpz8O6AUBgcHHipgZ3OZIiFSgm6F4mdKHuhB4bAADBgtwFw5kMY1gH4CnPFgFuDV/ji/dkQc3tsOIA22Z2L5azjHjBoj7CHjnyQNTDEgZjVpunnTLmOByom59c8n7AE1V6rRcWZS+dYdD07tO+Bw5wfHnlHr7o0RYXh6C/Lg7MiZevTaq7wvSwSPzYKkfdWe2oZtcYASDJKCOTwwePjMTEcYLcma2NK2wvfZUhseDUkZoBw/rSmzwahO7tlbmywX617JC6dmQsFR24EyC+BtloiJSDcm8f8WQVWzjlkgqGidmPKZS1dQX2h0W2YjPW7rytepWQQtBhoU8zO7rYffu4Vl4EyFgqBfzoryOt0xs/FYcfOKEgJI0vKYkBPGgDljG395GWSFw3IjCbgOZvDnB3Qwl5Htfr3/2COMaNYg/uuYjcXstvccl+XnT+jZwEAo65eWU5u5OYnn9k6wf891g1/FH5+XE62X5PUhAh8ebo+2zXuweUXXhANYIH6McrL/VwSc8yOlbkVLOlccFP6i+Ye6scj2FePRo4VQGFXFFi45ILGboz920rJnWkQnb1gc5zSBiah+9w9pjyJHtYondnUb2I2OwVx4+XZg33edrqZ+8+edmUOSS8nU/1sdW262qoT/zcLjOb4M8Y+pXfrLlRWZIJapomvxzx4UFhCim/VzTsz6uHP3KYJCyt4VKoXXWEOpOjfmq9W+wtk6rjho5tjplmBYR9hGr0tDiC+b0bKV3NhQLHCrfI9pZHizvWvcHpDBZ34ylQOr8QZDbUytnhVa4SEVdFeYkjSV6VIbktC9KZfoMkjpKHO5+8yil5ya1sZZGlTo9gyMwTY+lgwfvIEGdt7+C9CnFhyq5r5pRsel/L+nZnu2j+8pJLUdF6I0qYfO+kjoCYTHFpHHgcQXTcB72vF1XEmI6+fsEnZxsYOMqjTADjrsA1Oe/VHYVIrQO2uj3sIoxC2nhXLBc5BXE3VIo9BKRlqIHnjIZrjLvkNy/jZJqU7VYhazTG4SXXvLe2JuSdPcEn+yJgsivxGmLQiz36S+NoPVXRaRPQc5CJzAoCsvzlVEX8NgVqdz/n7bSpbR1xMHi/4vPZ8H/KlWQaTnt1tD89stgYXM+O83R2PkNUuphH1W524RzsicXaOAoVJYfFOSNof4KH55hgm16u3aR9lKA8JqF7RnvW7zxAUNFpVONGwPDHSgPSCAiDltkOh2fywwSBaextVnwitu7+SaC7EMI91Q77HzN7M0JWH73f6n4pCF8kzWUjmjuFBYYVJsB3Rp4dM+a9oi5+vHCduVp8CHBKPTKd2Gu+Z/uBrgUvyHkzLBIO4ivvlqfwWHc+ObOWSNR3B/aX4jr32x6aqt/IQuwH7Pak1uJssv6DwoZ7xPDoDCiiK6cXShE6qMtE2NovU7K/ZBqjG94o+DWKdxH6kR7kwd3utcTV6cp5wrLh/rbR88niGDlzpNY3rAXZ3LTOdKinruvdbbocP3DITKjqDc1UqCIFEMIQjNj3SatKeW1Kyrc2iupZ3k3U77IpHcuRgUOF8VkS8g93+cfu5e73FwlJHZoxE3bOAtDe9r6XNONd2AzsBIrYcpLvQO43GHNGW0YNVtaY9cmVKaHcILmUuzqbMhQHdf/0CVxHMYPLpoMBUfFSGdYXAnfpc46CALl1S1+qD1KzhKz4Cy4y+WPhKT0tTOCpE4QSIKUXMsOXTRoHvQkG4tYgdbvwdpZt5agfvX6jhVrGNoGQz0sZncTfsNI3+1lrr7WCZGpYny/SrbEHlG7fKq8CoXJQXbDjNUKeF2NpVQUpbCCbgGEYplv6ocdMEDODzLcTr1a9bF0Sq4rHBO0NL7k+slBbjuAO7+kIPJIBALO6rLpi80NXd71CuXaETm6Oy/OAnp8QuNWb8s+ygApIMnFxqmIkD6rfklmWKe/HqJ+U4nYs94inMfaVvy3m8h3DlD1+Y4GvRbjoTCvS8x/yVuxuNVQ/CopumZrECjB427hE8Qf/xH98n" target="_blank" rel="noopener noreferrer">Just click here. </a>
-<br></br>
-# <i>What Can This Do Right Now?</i>
+6. **Mining Simulation**
+   - Creates additional "mined" layers (`mine1a`–`mine16d`) by comparing the original bits against the recombined ones.
+   - Final output shows the "entangled" result + packed signatures.
 
-### &nbsp; &nbsp; Build Zero-Knowledge-Proofs with low tech
-### &nbsp; &nbsp; Build User Specific Binary Cores <sup>(<sub>up to 6 characters long</sub>)</sup>
-### &nbsp; &nbsp; Determine Atomic Value of input <sup>(<sub>up to 28 characters</sub>)</sup>
-### &nbsp; &nbsp; Build Corresponding Binary Field based on User's Core
-### &nbsp; &nbsp; Define an <i>abse64</i> [<i><b>a - Base64</b></i>], Binary <i>Square</i>, & <i>Base64 Signature</i> of the built User Binare Core
-### &nbsp; &nbsp; Perform first wave of field mining, non algorithmic, logical comparision mining
-<br></br><br></br>
-# <i>What's Still Needed?</i>
+This is **not** real quantum computing, it’s artistic chaos designed to look and feel quantum-inspired.
 
-### &nbsp; &nbsp; Algorithmic Mining <sup>(<sub><i>field mining</i> & <i>entangled mining</i></sub>)</sup>
-### &nbsp; &nbsp; Algorithmic Entangling to BIN Field
-### &nbsp; &nbsp; Private BIN Core Signature
-### &nbsp; &nbsp; Webb Data Storage based on Priv-BIN Core Signature locking
-### <s>&nbsp; &nbsp; Programable Field Input to Use During Mining & Core Building</s>
-<br></br><br></br>
-# <i>What are Known Issues?</i>
+---
 
-## Binary Core becomes predictable on output after 7 characters:
-### After 7 characters the core output can be guessed based on if input is even or odd.
+## Math Highlights (Simplified)
 
-## <s>Binary Core doesn't output correctly.</s>
-### <s>The first line of the binary core build determines some of the remainder and is not always outpting correctly based on input.</s>
+| Operation              | What it does                              | Why it feels "quantum"                     |
+|------------------------|-------------------------------------------|--------------------------------------------|
+| Stacked roots (`mq`)   | 16th root of a derived value              | Extreme compression / "deep levels"       |
+| Parity + Modulo        | `% 2`, `% 3`, length comparisons          | Simple rules create complex-looking grids |
+| Prime checker          | Trial division loop                       | Classic number-theory flavor               |
+| Bit recombination      | `joinset`, `rest`, `left` arrays          | Entanglement-style mixing of bits          |
+| Mining layers          | Multiple passes of equality checks        | Simulated "proof-of-work" feel             |
+| Signature packing      | Everything Base64’d together              | Final "proof" that can be copied           |
 
-## <s>Binary Field doesn't output correctly when binary core isn't outputing correctly.</s>
-### <s>Related to other known issue, the Binary field will not output correctly when the binary core isn't outputing correctly.</s>
-<hr>
-# <s>Striked Out Items are No-Longer Issues or Added Features</s>
+---
+
+## Features
+
+- Instant transformation from plain text to rich binary art
+- Live display of **Core**, **Square**, **Field**, and **Mined** sections
+- Clickable "📝" icons that expand full Base64 signatures
+- Optional 5-character secret code for personalization
+- Fully self-contained, no server, no install
+
+## Terminology Table
+
+| Term in UI/Code       | What it actually is                        | Plain English                              |
+|-----------------------|--------------------------------------------|--------------------------------------------|
+| **Faux-Qbit**         | The entire generator                       | Fake quantum bit toy                       |
+| **BIN Core**          | First 8 bits from length/math checks       | The "engine" of the binary output          |
+| **BIN Square**        | Visual 2×4 grid of core bits               | Pretty square version                      |
+| **BIN Field**         | Full expanded multi-line bit pattern       | The complete "quantum landscape"           |
+| **Mining**            | Extra comparison layers + display          | The fun "processing" animation             |
+| **Signatures**        | Packed Base64 of everything + secret       | The final signed proof package             |
+| `ck1`–`ck8`           | Decision bits (parity, modulo, prime)      | Hidden flags that decide every 0 or 1      |
+| `joinset` / `rest` / `left` | Recombination & equality checks     | Ways of mixing and checking bits           |
+
+---
+
+## Project Status
+
+**🚧 Under Construction • Pure Creative Math Playground**
+
+- Extremely fun and satisfying to play with.
+- The code is intentionally dense and artistic, a love letter to mathematical chaos.
+- Future ideas: Save outputs, more transformation modes, canvas visualizer, export as SVG, real quantum-inspired algorithms.
+
+Contributions, new math layers, visual upgrades, or help cleaning/refactoring are **very welcome**!
+
+---
+
+**Made by** 3Douglas Pihl (DigiMancer3D)  
+
+---
